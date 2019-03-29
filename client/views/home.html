@@ -1,0 +1,19 @@
+<div>
+    <h1>Your Home page</h1>
+</div>
+
+
+<form class="form">
+    <div class="form-group">
+        <label for="sel1">Select friend:</label>
+        <select class="form-control" ng-model='userId' id="sel1">
+          <option ng-repeat='x in users track by $index' value='{{x.username}}'>{{x.fname}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="pwd">Message:</label>
+        <input type="text" class="form-control" ng-model="message" id="message">
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="sendMessage()">Submit</button>
+</form>
+<br>

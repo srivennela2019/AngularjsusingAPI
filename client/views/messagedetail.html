@@ -1,0 +1,14 @@
+<h3>Message from {{message.sendid}}</h3>
+<p>{{message.message}}</p>
+<form class="form">
+    <div class="form-group">
+        <label for="pwd">REPLY:</label>
+        <input type="text" class="form-control" ng-model="reply" id="reply">
+    </div>
+    <button class="btn btn-primary" ng-click="sendReply()">Reply</button>
+    <button class="btn btn-danger" ng-click="deleteMessage()">Delete</button>
+    <div class="checkbox">
+        <label><input type="checkbox" ng-model="message.imp" ng-change='markImp()'>Mark as Important</label>
+    </div>
+    <button class="btn btn-warning" ng-click="backToMessages()">Back to Messages</button>
+</form>

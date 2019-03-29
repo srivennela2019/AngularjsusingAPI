@@ -1,0 +1,16 @@
+<h3>Messages</h3>
+<table class="table table-striped">
+    <tr>
+        <td>From</td>
+        <td>Message</td>
+        <td>Important</td>
+    </tr>
+    <tr ng-repeat='m in messages track by $index' ng-if='m.userid==loggedin'>
+        <td>{{m.sendid}}</td>
+
+        <td><a href="#/messaged/{{$index}}">{{m.message}}</a></td>
+        <td><span ng-show='{{m.imp}}' class="glyphicon glyphicon-star"></span></td>
+
+
+    </tr>
+</table>
